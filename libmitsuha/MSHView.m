@@ -85,6 +85,9 @@
 -(void)updateWaveColor:(UIColor *)waveColor subwaveColor:(UIColor *)subwaveColor{
 }
 
+-(void)updateWaveColor:(UIColor *)waveColor subwaveColor:(UIColor *)subwaveColor subSubwaveColor:(UIColor *)subSubwaveColor{
+}
+
 - (void)redraw{
     if (self.autoHide) {
         if (silentSince < ((long long)[[NSDate date] timeIntervalSince1970] - 1)) {

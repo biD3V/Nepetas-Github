@@ -3,6 +3,7 @@
 #import <Mitsuha/MSHBarView.h>
 #import <Mitsuha/MSHLineView.h>
 #import <Mitsuha/MSHDotView.h>
+#import <Mitsuha/MSHSiriView.h>
 
 @interface MSHConfig : NSObject
 
@@ -22,6 +23,7 @@
 
 @property (nonatomic, strong) UIColor *waveColor;
 @property (nonatomic, strong) UIColor *subwaveColor;
+@property (nonatomic, strong) UIColor *subSubwaveColor;
 @property (nonatomic, strong) UIColor *calculatedColor;
 
 @property NSUInteger numberOfPoints;

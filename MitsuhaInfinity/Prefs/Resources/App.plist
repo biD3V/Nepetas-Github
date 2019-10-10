@@ -58,7 +58,6 @@
 			<key>PostNotification</key>
 			<string>me.nepeta.mitsuhainfinity/ReloadPrefs</string>
 		</dict>
-
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
@@ -67,7 +66,7 @@
 			<key>isStaticText</key>
 			<true/>
 		</dict>
-        <dict>
+		<dict>
 			<key>cell</key>
 			<string>PSSegmentCell</string>
 			<key>default</key>
@@ -82,6 +81,7 @@
 				<integer>1</integer>
 				<integer>2</integer>
 				<integer>3</integer>
+				<integer>4</integer>
 			</array>
 			<key>validTitles</key>
 			<array>
@@ -89,9 +89,10 @@
 				<string>Bar</string>
 				<string>Line</string>
 				<string>Dot</string>
+				<string>Siri</string>
 			</array>
 			<key>alignment</key>
-			<string>4</string>
+			<string>5</string>
 			<key>PostNotification</key>
 			<string>me.nepeta.mitsuhainfinity/ReloadPrefs</string>
 		</dict>
@@ -123,7 +124,6 @@
 			<key>PostNotification</key>
 			<string>me.nepeta.mitsuhainfinity/ReloadPrefs</string>
 		</dict>
-
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
@@ -188,7 +188,6 @@
 			<key>PostNotification</key>
 			<string>me.nepeta.mitsuhainfinity/ReloadPrefs</string>
 		</dict>
-
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
@@ -225,7 +224,6 @@
 			<key>PostNotification</key>
 			<string>me.nepeta.mitsuhainfinity/ReloadPrefs</string>
 		</dict>
-
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
@@ -234,7 +232,7 @@
 			<key>isStaticText</key>
 			<true/>
 		</dict>
-        <dict>
+		<dict>
 			<key>cell</key>
 			<string>PSSegmentCell</string>
 			<key>default</key>
@@ -248,15 +246,17 @@
 				<integer>0</integer>
 				<integer>1</integer>
 				<integer>2</integer>
+				<integer>3</integer>
 			</array>
 			<key>validTitles</key>
 			<array>
 				<string>Dynamic - old</string>
 				<string>Dynamic - new</string>
 				<string>Custom</string>
+				<string>Siri</string>
 			</array>
 			<key>alignment</key>
-			<string>3</string>
+			<string>4</string>
 			<key>PostNotification</key>
 			<string>me.nepeta.mitsuhainfinity/ReloadPrefs</string>
 		</dict>
@@ -309,7 +309,6 @@
 			<key>label</key>
 			<string>Wave color</string>
 		</dict>
-
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
@@ -317,8 +316,8 @@
 			<string>Other</string>
 			<key>isStaticText</key>
 			<true/>
-            <key>id</key>
-            <string>otherSettings</string>
+			<key>id</key>
+			<string>otherSettings</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -418,7 +417,6 @@
 			<key>PostNotification</key>
 			<string>me.nepeta.mitsuhainfinity/ReloadPrefs</string>
 		</dict>
-		<!-- Credits -->
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>

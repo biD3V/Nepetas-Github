@@ -20,23 +20,19 @@
 			<key>user</key>
 			<string>NepetaDev</string>
 		</dict>
-
-		<!-- Apps -->
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
 			<string>Supported applications</string>
 			<key>footerText</key>
-			<string>Due to the changes to this tweak's structure, support for external applications is provided in separate tweaks.
+			<string>Due to the changes to this tweak&apos;s structure, support for external applications is provided in separate tweaks.
 Repo: https://repo.nepeta.me/</string>
 			<key>isStaticText</key>
 			<true/>
-            <key>id</key>
-            <string>apps</string>
+			<key>id</key>
+			<string>apps</string>
 		</dict>
-
-		<!-- Credits -->
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
@@ -69,7 +65,7 @@ Repo: https://repo.nepeta.me/</string>
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>isDestructive</key>
-			<true />
+			<true/>
 			<key>confirmation</key>
 			<dict>
 				<key>prompt</key>
@@ -84,15 +80,23 @@ Repo: https://repo.nepeta.me/</string>
 			<key>label</key>
 			<string>Restore default settings and respring</string>
 		</dict>
-
-
 		<dict>
 			<key>cellClass</key>
 			<string>HBLinkTableCell</string>
 			<key>label</key>
 			<string>Github</string>
 			<key>subtitle</key>
-			<string>Source code</string>
+			<string>Maintained source Code</string>
+			<key>url</key>
+			<string>https://github.com/BiD3V/MitsuhaInfinity</string>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>HBLinkTableCell</string>
+			<key>label</key>
+			<string>Github</string>
+			<key>subtitle</key>
+			<string>Original source code</string>
 			<key>url</key>
 			<string>https://github.com/Nepeta/MitsuhaInfinity</string>
 		</dict>
@@ -100,9 +104,19 @@ Repo: https://repo.nepeta.me/</string>
 			<key>cellClass</key>
 			<string>HBLinkTableCell</string>
 			<key>label</key>
+			<string>Become a Patron of biD3v</string>
+			<key>subtitle</key>
+			<string>Mitusha Infinity updater</string>
+			<key>url</key>
+			<string>https://www.patreon.com/biD3V</string>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>HBLinkTableCell</string>
+			<key>label</key>
 			<string>Donate to Nepeta</string>
 			<key>subtitle</key>
-			<string>MitsuhaXI, Mitsuha Infinity developer</string>
+			<string>MitsuhaXI, Mitsuha Infinity developer (Left here incase she comes back)</string>
 			<key>url</key>
 			<string>https://nepeta.me/donate</string>
 		</dict>
@@ -116,12 +130,11 @@ Repo: https://repo.nepeta.me/</string>
 			<key>url</key>
 			<string>https://www.paypal.me/c0ldra1n</string>
 		</dict>
-
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Mitsuha, Mitsuha2 by c0ldra1n,
+			<string>Mitusha Infinity by Nepeta, Mitsuha, Mitsuha2 by c0ldra1n
 MitsuhaXI, Mitsuha Infinity by Nepeta.</string>
 			<key>isStaticText</key>
 			<true/>

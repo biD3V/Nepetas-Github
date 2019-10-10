@@ -31,12 +31,17 @@
 
 @property (nonatomic, strong) UIColor *calculatedColor;
 @property (nonatomic, strong) UIColor *waveColor;
+@property (nonatomic, strong) UIColor *rWaveColor;
 @property (nonatomic, strong) UIColor *subwaveColor;
+@property (nonatomic, strong) UIColor *rSubwaveColor;
+@property (nonatomic, strong) UIColor *subSubwaveColor;
+@property (nonatomic, strong) UIColor *rSubSubwaveColor;
 
 @property (nonatomic, retain) MSHAudioSource *audioSource;
 @property (nonatomic, retain) MSHAudioProcessing *audioProcessing;
 
 -(void)updateWaveColor:(UIColor *)waveColor subwaveColor:(UIColor *)subwaveColor;
+-(void)updateWaveColor:(UIColor *)waveColor subwaveColor:(UIColor *)subwaveColor subSubwaveColor:(UIColor *)subSubwaveColor;
 
 -(void)start;
 -(void)stop;

@@ -49,6 +49,9 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
             self.view = [[MSHDotView alloc] initWithFrame:frame];
             [((MSHDotView*)_view) setBarSpacing:self.barSpacing];
             break;
+        case 4:
+            self.view = [[MSHSiriView alloc] initWithFrame:frame];
+            break;
         default:
             self.view = [[MSHJelloView alloc] initWithFrame:frame];
     }
@@ -79,21 +82,35 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
         [_view updateWaveColor:[self.waveColor copy] subwaveColor:[self.waveColor copy]];
     } else if (self.calculatedColor) {
         [_view updateWaveColor:[self.calculatedColor copy] subwaveColor:[self.calculatedColor copy]];
-    }
+    } /* else if (self.colorMode == 3 && self.waveColor && self.subwaveColor && self.subSubwaveColor) {
+        [_view updateWaveColor:[self.waveColor copy] subwaveColor:[self.waveColor copy] subSubwaveColor:[self.waveColor copy]];
+    } */
 }
 
 -(void)colorizeView:(UIImage *)image {
     if (self.view == NULL) return;
     UIColor *color = self.waveColor;
+    UIColor *scolor = self.waveColor;
+    UIColor *sscolor = self.waveColor;
 
     if (self.colorMode == 1) {
         color = [NEPColorUtils averageColorNew:image withAlpha:self.dynamicColorAlpha];
+        scolor = [NEPColorUtils averageColorNew:image withAlpha:self.dynamicColorAlpha];
     } else if (self.colorMode == 0) {
         color = [NEPColorUtils averageColor:image withAlpha:self.dynamicColorAlpha];
+        scolor = [NEPColorUtils averageColor:image withAlpha:self.dynamicColorAlpha];
+    } else if (self.colorMode == 3) {
+        color = [UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:self.dynamicColorAlpha];
+        scolor = [UIColor colorWithRed:0.0f green:1.0f blue:0.0f alpha:self.dynamicColorAlpha];
+        sscolor = [UIColor colorWithRed:0.0f green:0.0f blue:1.0f alpha:self.dynamicColorAlpha];
     }
 
     self.calculatedColor = color;
-    [self.view updateWaveColor:[color copy] subwaveColor:[color copy]];
+    if (self.colorMode == 3) {
+        [self.view updateWaveColor:[color copy] subwaveColor:[scolor copy] subSubwaveColor:[sscolor copy]];
+    } else {
+        [self.view updateWaveColor:[color copy] subwaveColor:[scolor copy]];
+    }
 }
 
 -(void)setDictionary:(NSDictionary *)dict {
