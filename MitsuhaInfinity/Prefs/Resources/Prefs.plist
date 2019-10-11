@@ -16,9 +16,9 @@
 			<key>cellClass</key>
 			<string>HBTwitterCell</string>
 			<key>label</key>
-			<string>Nepeta</string>
+			<string>biD3V</string>
 			<key>user</key>
-			<string>NepetaDev</string>
+			<string>biD3V</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -27,7 +27,7 @@
 			<string>Supported applications</string>
 			<key>footerText</key>
 			<string>Due to the changes to this tweak&apos;s structure, support for external applications is provided in separate tweaks.
-Repo: https://repo.nepeta.me/</string>
+Repo: https://chr0nict.github.io/Nepeta-Mirror/</string>
 			<key>isStaticText</key>
 			<true/>
 			<key>id</key>
@@ -88,7 +88,7 @@ Repo: https://repo.nepeta.me/</string>
 			<key>subtitle</key>
 			<string>Maintained source Code</string>
 			<key>url</key>
-			<string>https://github.com/BiD3V/MitsuhaInfinity</string>
+			<string>https://github.com/BiD3V/Nepetas-Github/MitsuhaInfinity</string>
 		</dict>
 		<dict>
 			<key>cellClass</key>
@@ -134,7 +134,7 @@ Repo: https://repo.nepeta.me/</string>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Mitusha Infinity by Nepeta, Mitsuha, Mitsuha2 by c0ldra1n
+			<string>Mitsuha, Mitsuha2 by c0ldra1n
 MitsuhaXI, Mitsuha Infinity by Nepeta.</string>
 			<key>isStaticText</key>
 			<true/>

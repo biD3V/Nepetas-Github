@@ -429,8 +429,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Mitsuha, Mitsuha2 by c0ldra1n,$
-ported to iOS 11 by Nepeta.</string>
+			<string>Mitsuha, Mitsuha2 by c0ldra1n,
+ported to iOS 11 by Nepeta,
+updated by biD3V.</string>
 			<key>isStaticText</key>
 			<true/>
 		</dict>

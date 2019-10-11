@@ -82,9 +82,9 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
         [_view updateWaveColor:[self.waveColor copy] subwaveColor:[self.waveColor copy]];
     } else if (self.calculatedColor) {
         [_view updateWaveColor:[self.calculatedColor copy] subwaveColor:[self.calculatedColor copy]];
-    } /* else if (self.colorMode == 3 && self.waveColor && self.subwaveColor && self.subSubwaveColor) {
+    } else if (self.colorMode == 3 && self.waveColor && self.subwaveColor && self.subSubwaveColor) {
         [_view updateWaveColor:[self.waveColor copy] subwaveColor:[self.waveColor copy] subSubwaveColor:[self.waveColor copy]];
-    } */
+    }
 }
 
 -(void)colorizeView:(UIImage *)image {
