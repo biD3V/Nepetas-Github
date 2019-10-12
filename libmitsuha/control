@@ -1,9 +1,11 @@
 Package: me.nepeta.libmitsuha
 Name: libmitsuha
-Version: 0.2.0
+Version: 0.2.1
 Architecture: iphoneos-arm
 Description: Audio visualizer library
 Maintainer: BiD3V
 Author: Nepeta & BiD3V
 Section: Development
 Depends: io.ominousness.ass (>= 1.0.1), firmware (>= 9.0)
+Depiction: https://biD3V.github.io/repo/depictions/bilibmitsuha.html
+Icon: https://biD3V.github.io/repo/icons/bilibmitsuha.png

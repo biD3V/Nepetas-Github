@@ -53,7 +53,11 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
             self.view = [[MSHSiriView alloc] initWithFrame:frame];
             break;
         default:
-            self.view = [[MSHJelloView alloc] initWithFrame:frame];
+            if (self.colorMode == 3) {
+                self.view = [[MSHJelloSiriView alloc] initWithFrame:frame];
+            } else {
+                self.view = [[MSHJelloView alloc] initWithFrame:frame];
+            }
     }
 
     if (superview) {
@@ -81,7 +85,8 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
     if (self.colorMode == 2 && self.waveColor && self.subwaveColor) {
         [_view updateWaveColor:[self.waveColor copy] subwaveColor:[self.waveColor copy]];
     } else if (self.calculatedColor) {
-        [_view updateWaveColor:[self.calculatedColor copy] subwaveColor:[self.calculatedColor copy]];
+        // [_view updateWaveColor:[self.calculatedColor copy] subwaveColor:[self.calculatedColor copy]];
+        [_view updateWaveColor:[self.calculatedColor copy] subwaveColor:[self.calculatedColor copy] subSubwaveColor:[self.calculatedColor copy]];
     } else if (self.colorMode == 3 && self.waveColor && self.subwaveColor && self.subSubwaveColor) {
         [_view updateWaveColor:[self.waveColor copy] subwaveColor:[self.waveColor copy] subSubwaveColor:[self.waveColor copy]];
     }
@@ -96,17 +101,26 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
     if (self.colorMode == 1) {
         color = [NEPColorUtils averageColorNew:image withAlpha:self.dynamicColorAlpha];
         scolor = [NEPColorUtils averageColorNew:image withAlpha:self.dynamicColorAlpha];
+        sscolor = [NEPColorUtils averageColorNew:image withAlpha:self.dynamicColorAlpha];
     } else if (self.colorMode == 0) {
         color = [NEPColorUtils averageColor:image withAlpha:self.dynamicColorAlpha];
         scolor = [NEPColorUtils averageColor:image withAlpha:self.dynamicColorAlpha];
+        sscolor = [NEPColorUtils averageColor:image withAlpha:self.dynamicColorAlpha];
     } else if (self.colorMode == 3) {
-        color = [UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:self.dynamicColorAlpha];
-        scolor = [UIColor colorWithRed:0.0f green:1.0f blue:0.0f alpha:self.dynamicColorAlpha];
-        sscolor = [UIColor colorWithRed:0.0f green:0.0f blue:1.0f alpha:self.dynamicColorAlpha];
+        if (self.enableAColors == YES) {
+            NEPPalette *palette = [NEPColorUtils averageColors:image withAlpha:self.dynamicColorAlpha];
+            color = palette.primary;
+            scolor = palette.secondary;
+            sscolor = palette.background;
+        } else {
+            color = [UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:self.dynamicColorAlpha];
+            scolor = [UIColor colorWithRed:0.0f green:1.0f blue:0.0f alpha:self.dynamicColorAlpha];
+            sscolor = [UIColor colorWithRed:0.0f green:0.0f blue:1.0f alpha:self.dynamicColorAlpha];
+        }
     }
 
     self.calculatedColor = color;
-    if (self.colorMode == 3) {
+    if (self.colorMode == 3 || self.style == 4) {
         [self.view updateWaveColor:[color copy] subwaveColor:[scolor copy] subSubwaveColor:[sscolor copy]];
     } else {
         [self.view updateWaveColor:[color copy] subwaveColor:[scolor copy]];
@@ -127,6 +141,7 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
     _disableBatterySaver = [([dict objectForKey:@"disableBatterySaver"] ?: @(NO)) boolValue];
     _enableFFT = [([dict objectForKey:@"enableFFT"] ?: @(NO)) boolValue];
     _enableAutoHide = [([dict objectForKey:@"enableAutoHide"] ?: @(YES)) boolValue];
+    _enableAColors = [([dict objectForKey:@"enableAColors"] ?: @(NO)) boolValue];
     
     if ([dict objectForKey:@"waveColor"]){
         if ([[dict objectForKey:@"waveColor"] isKindOfClass:[UIColor class]]) {
@@ -195,6 +210,7 @@ void notificationCallback(CFNotificationCenterRef center, void * observer, CFStr
 
     prefs[@"gain"] = [prefs objectForKey:@"gain"] ?: @(50);
     prefs[@"subwaveColor"] = prefs[@"waveColor"];
+    prefs[@"subSubWaveColor"] = prefs[@"waveColor"];
     prefs[@"waveOffset"] = ([prefs objectForKey:@"waveOffset"] ?: @(0));
 
     return prefs;

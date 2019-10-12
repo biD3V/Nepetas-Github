@@ -4,6 +4,7 @@
 #import <Mitsuha/MSHLineView.h>
 #import <Mitsuha/MSHDotView.h>
 #import <Mitsuha/MSHSiriView.h>
+#import <Mitsuha/MSHJelloSiriView.h>
 
 @interface MSHConfig : NSObject
 
@@ -20,6 +21,7 @@
 @property BOOL enableAutoHide;
 @property double gain;
 @property double limiter;
+@property BOOL enableAColors;
 
 @property (nonatomic, strong) UIColor *waveColor;
 @property (nonatomic, strong) UIColor *subwaveColor;

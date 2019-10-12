@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:control">
+   </FileRef>
+   <FileRef
+      location = "group:Makefile">
+   </FileRef>
+   <FileRef
+      location = "group:MSHAudioProcessing.m">
+   </FileRef>
+   <FileRef
+      location = "group:MSHAudioSource.m">
+   </FileRef>
+   <FileRef
+      location = "group:MSHAudioSourceASS.m">
+   </FileRef>
+   <FileRef
+      location = "group:MSHBarView.m">
+   </FileRef>
+   <FileRef
+      location = "group:MSHDotView.m">
+   </FileRef>
+   <FileRef
+      location = "group:MSHJelloLayer.m">
+   </FileRef>
+   <FileRef
+      location = "group:MSHJelloView.m">
+   </FileRef>
+   <FileRef
+      location = "group:MSHLineView.m">
+   </FileRef>
+   <FileRef
+      location = "group:MSHSiriView.m">
+   </FileRef>
+   <FileRef
+      location = "group:MSHJelloSiriView.m">
+   </FileRef>
+   <FileRef
+      location = "group:MSHView.m">
+   </FileRef>
+   <FileRef
+      location = "group:public">
+   </FileRef>
+</Workspace>
